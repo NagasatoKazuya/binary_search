@@ -12,6 +12,15 @@ int main(){
     scanf("%d", &A[i]);
   }
 
+    lb = -1;
+    ub = n;
+    while(ub - lb > 1) {
+        int m = (lb + ub)/2;
+        if(A[m] >= k) ub = m;
+        else lb = m;
+    }
+    
+    printf("answer is %d\n", ub);
 
   return 0;
 }
