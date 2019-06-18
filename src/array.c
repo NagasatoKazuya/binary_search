@@ -12,6 +12,7 @@ int main(){
     scanf("%d", &A[i]);
   }
 
+    //ここに書く
 
 
   return 0;
