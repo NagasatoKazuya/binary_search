@@ -12,9 +12,9 @@ int main(){
     scanf("%d", &A[i]);
   }
 
-  lb = -1;
-  ub = n;
-  
+  lb = -1;  //A[lb] < x であるとわかっている最大の数
+  ub = n;   //A[ub] >= x であるとわかっている最小の数
+
   while(ub - lb > 1) {
       int m = (lb + ub)/2;
       if(A[m] >= k) ub = m;
