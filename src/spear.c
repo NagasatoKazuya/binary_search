@@ -4,13 +4,13 @@ int n;
 int k;
 int A[100000];
 
-int p (int x) {
-  int sum = 0;
-  if (x == 0) return 0;
+int p (int x) {     ////p(x)を非減少単調数列とする(作れるなら0,作れないなら1を返す)
+  long long int sum = 0;
+  if (x == 0) return 0;       //長さ0の槍はいくらでも作れるので0を返す
   for (int i = 0; i < n; i++){      //長さxの棒がsum本だけ作れる
     sum += A[i] / x;
   }
-  return sum < k;    //p(x)を非減少単調数列とする(作れるなら0,作れないなら1を返す)
+  return sum < k;    
 }
 
 int main(){
@@ -29,7 +29,7 @@ int main(){
     else lb = m;
   }
 
-  printf("answer is %d\n", ub-1);
+  printf("answer is %d\n", lb);     //p(x)の定義から、lbを出力
 
 
   return 0;
